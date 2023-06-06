@@ -1,16 +1,17 @@
 <script setup>
-import IPhoneView from './views/IPhoneView.vue';
-import DesktopView from './views/DesktopView.vue';
+import MobileView from './components/MobileView.vue';
+import DesktopView from './components/DesktopView.vue';
 
 const isIOSSafari = !!window.navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 
 </script>
 
 <template>
+  
   <div id="app">
 
     <div v-if="isIOSSafari">
-      <IPhoneView/>
+      <MobileView/>
     </div>
     <div v-else>
       <DesktopView/>
